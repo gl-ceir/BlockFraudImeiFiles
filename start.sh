@@ -12,7 +12,7 @@ then
  echo "Process Already Running"
 else
  echo "Starting Process"
-java -Dlogging.config=./log4j2.xml -Dspring.config.location=:./application.properties,file:${APP_HOME}/configuration/configuration.properties  -jar $build  >> ${DATA_HOME}/logs/BlockFraudApi/log.log 2>> ${DATA_HOME}/logs/BlockFraudApi/error.log &
+java -Dlogging.config=./log4j2.xml -Dspring.config.location=file:./application.properties,file:${APP_HOME}/configuration/configuration.properties  -jar $build  >> ${DATA_HOME}/logs/BlockFraudApi/log.log 2>> ${DATA_HOME}/logs/BlockFraudApi/error.log &
 echo "Process Started"
 fi
 
